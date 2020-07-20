@@ -6,4 +6,4 @@
 
 
 [Github](https://github.com/TrustedDataFramework/SunFlowerCore.git)
-[Get Started](README.md)
+[Get Started](zh-cn/README.md)
