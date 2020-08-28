@@ -63,7 +63,7 @@
 &#160;&#160;&#160;&#160;&#160;&#160;typescript, rust, c, c++, javascript, golang
 
 ## 12.6 智能合约示例
-<b>注：详细的智能合约部署和调用说明，具体参见 《[智能合约详细说明](zh-cn/Contracts.md)》。</b>
+<b>注：详细的智能合约部署和调用说明，具体参见 《[TDS 智能合约编写指引 (AssemblyScript 篇)](./zh-cn/Contracts.md)》。</b>
 
 ### 12.6.1 入门
 以下是一个智能合约 hello world 示例：
