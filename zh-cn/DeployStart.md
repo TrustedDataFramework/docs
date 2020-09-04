@@ -18,7 +18,7 @@ https://yongyang-common.oss-cn-beijing.aliyuncs.com/local-0.yml
 
 4.在命令行输入
 ```
- java -jar sunflower-core-0.0.1-SNAPSHOT.jar --spring.config.location=local-0.yml
+java -jar sunflower-core-0.0.1-SNAPSHOT.jar --spring.config.location=local-0.yml
 ```
  
 ## 4.3 启动说明
