@@ -28,7 +28,7 @@ SPRING_CONFIG_LOCATION=classpath:application.yml,$HOME/Documents/local.yml java 
 Java -jar sunflower*.jar --spring.config.location=classpath:application.yml
 
 &#160;&#160;&#160;&#160;&#160;&#160;配置文件中的参数都可以用相应的命令函参数覆盖， 例如配置文件中的配置项 spring.datasource.url 可以在启动时用命令行参数覆盖。
-java -jar app.jar --spring.datasource.url="jdbc:h2:mem:test"
+java -jar app.jar --spring.datasource.url="jdbc\:h2:mem:test"
 
 ##  4.4 证书
 ##  4.5 编码格式
