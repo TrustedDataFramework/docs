@@ -29,6 +29,7 @@ Java -jar sunflower*.jar --spring.config.location=classpath:application.yml
 
 &#160;&#160;&#160;&#160;&#160;&#160;配置文件中的参数都可以用相应的命令函参数覆盖， 例如配置文件中的配置项 spring.datasource.url 可以在启动时用命令行参数覆盖。
 java -jar app.jar --spring.datasource.url="jdbc:h2:mem:test"
+
 ##  4.4 证书
 ##  4.5 编码格式
 &#160;&#160;&#160;&#160;&#160;&#160;递归前缀编码(RLP)：https://github.com/ethereum/wiki/wiki/RLP 一种二进制序列化规范，优点是紧凑，缺点是最大只支持对4G以下的内容进行编解码。
