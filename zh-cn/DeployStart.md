@@ -13,29 +13,28 @@ http://openjdk.java.net/install/
 2.下载好打包好的 jar 文件，名称为
 sunflower-core-0.0.1-SNAPSHOT.jar
 
-3.下载样板配置文件，根据自己的需求修改配置
-https://yongyang-common.oss-cn-beijing.aliyuncs.com/local-0.yml
-
-4.在命令行输入
+3.在命令行输入
 ```
-java -jar sunflower-core-0.0.1-SNAPSHOT.jar --spring.config.location=local-0.yml
+java -jar sunflower-core-0.0.1-SNAPSHOT.jar
 ```
  
 ## 4.3 启动说明
 
 &#160;&#160;&#160;&#160;&#160;&#160;TDS 采用 yml 文件作为参数配置文件，可以在启动时用环境变量SPRING_CONFIG_LOCATION 指定好自定义的配置文件。 例如:
 ```
-java -jar sunflower*.jar --spring.config.location=classpath:application.yml,$HOME/Documents/local.yml
+export SUNFLOWER_CONFIG_LOCATION=$HOME/Documents/local0.yml,$HOME/Documents/local1.yml
+java -jar sunflower*.jar
 ```
 
 &#160;&#160;&#160;&#160;&#160;&#160;文件路径之间以逗号分割，后面的配置会覆盖前面的配置。 除了环境变量配置，也可以用命令行参数指定配置文件，例如
+
 ```
-java -jar sunflower*.jar --spring.config.location=classpath:application.yml
+java -jar sunflower*.jar --spring.config.location=$HOME/Documents/local0.yml
 ```
 
 &#160;&#160;&#160;&#160;&#160;&#160;配置文件中的参数都可以用相应的命令函参数覆盖， 例如配置文件中的配置项 spring.datasource.url 可以在启动时用命令行参数覆盖。
 ```
-java -jar app.jar --spring.datasource.url="jdbc:h2:mem:test"
+java -jar sunflower*.jar --spring.datasource.url="jdbc:h2:mem:test"
 ```
 
 ##  4.4 证书
