@@ -37,8 +37,7 @@ java -jar sunflower*.jar --spring.config.location=$HOME/Documents/local0.yml
 java -jar sunflower*.jar --spring.datasource.url="jdbc:h2:mem:test"
 ```
 
-##  4.4 证书
-##  4.5 编码格式
+##  4.4 编码格式
 &#160;&#160;&#160;&#160;&#160;&#160;递归前缀编码(RLP)：https://github.com/ethereum/wiki/wiki/RLP 一种二进制序列化规范，优点是紧凑，缺点是最大只支持对4G以下的内容进行编解码。
 
 &#160;&#160;&#160;&#160;&#160;&#160;java 可以采用注解的方式进行 rlp 编码和解码：https://github.com/TrustedDataFramework/java-rlp

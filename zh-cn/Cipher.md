@@ -85,22 +85,40 @@ keystore 用于保存用户的私钥
 }
  ```
 keystore 的生成过程用伪代码表示:
-```
+
+```py
 keystore = {}
-sk = b'********' # 私钥password = '********' # 用户输入的密码salt =
-randbytes(32) # 生成随机盐iv = randbytes(16) # 生成随机向量key = sm3(salt
-+ password.encode('ascii'))[:16] # 推导出keykeystore['salt'] =
-salt.hex()keystore['iv'] = iv.hex()keystore['ciphertext'] =
-sm4.encrypt_ctr_nopadding(key, iv, sk) # 对私钥进行加密保存keystore['mac']
-= sm3(key + ciphertext).hex() # 生成 mackeystore['id'] == uuid()
+sk = b'********' # 私钥
+password = '********' # 用户输入的密码
+salt = randbytes(32) # 生成随机盐
+iv = randbytes(16) # 生成随机向量
+
+key = sm3(salt + password.encode('ascii'))[:16] # 推导出密钥
+keykeystore['salt'] = salt.hex()
+keystore['iv'] = iv.hex()
+
+keystore['ciphertext'] = sm4.encrypt_ctr_nopadding(key, iv, sk) # 对私钥进行加密保存
+
+keystore['mac'] = sm3(key + ciphertext).hex() # 生成 mac 用于验证密码的正确性
+
+keystore['id'] == uuid()
 keystore['version'] = '1'
 ```
+
 keystore 的读取过程用伪代码表示：
-```
-password = '********' # 用户输入的密码salt =
-bytes.fromhex(keystore['salt']) # 盐iv = bytes.fromhex(keystore['iv']) #
-ivkey = sm3(salt + password.encode('ascii'))[:16]cipher =
-bytes.fromhex(keystore['ciphertext'])sk = sm4.decrypt_ctr_nopadding(key,
-iv, cipher) # 读取到私钥
+
+```py
+password = '********' # 用户输入的密码
+salt = bytes.fromhex(keystore['salt']) # 盐
+iv = bytes.fromhex(keystore['iv']) # iv
+key = sm3(salt + password.encode('ascii'))[:16]
+
+# 对输入密码进行校验
+mac = sm3(key + ciphertext).hex()
+if mac != keystore['mac']:
+  raise BaseException('解析 keystore 失败: 密码错误')
+
+cipher = bytes.fromhex(keystore['ciphertext'])
+sk = sm4.decrypt_ctr_nopadding(key, iv, cipher) # 读取到私钥
 ```
 <b>注：具体国密和keystore调用可以参考SDK使用</b>

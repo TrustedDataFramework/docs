@@ -28,7 +28,7 @@ sunflower:
     genesis: 'genesis/poa.jsonc' # 创世区块的 url，搜索优先级是 网路 > 文件系统 > classpath 
     block-interval: '1' # 出块间隔，最小值是一秒
     enable-mining: 'true' # 是否开启挖矿
-    private-key: 'f00df601a78147ffe0b84de1dffbebed2a6ea965becd5d0bd7faf54f1f29c6b5' # 节点的私钥明文，建议使用证书的方式加载
+    private-key: 'f00df601a78147ffe0b84de1dffbebed2a6ea965becd5d0bd7faf54f1f29c6b5' # 节点的私钥明文，建议使用环境变量的方式加载
     allow-empty-block: 'false' # 是否允许空块
     max-body-size: '2048' # 区块的最大事务数量限制
 ```
