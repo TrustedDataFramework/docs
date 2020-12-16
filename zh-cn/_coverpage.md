@@ -1,9 +1,9 @@
 ![logo](../img/favicon-big.png)
 
-# TDS文档知识库
+# TDOS文档知识库
 
-> 欢迎进入TDS
+> 欢迎进入TDOS
 
 
-[Github](https://github.com/TrustedDataFramework/SunFlowerCore.git)
-[Get Started](zh-cn/README.md)
+[Github](https://github.com/TrustedDataFramework)
+[Get Started](README.md)

@@ -1,9 +1,9 @@
 
 ![logo](img/favicon-big.png)
 
-# TDS Document Knowledge Base
+# TDOS Document Knowledge Base
 
-> Welcome to TDS
+> Welcome to TDOS
 
-[Github](https://github.com/TrustedDataFramework/SunFlowerCore.git)
+[Github](https://github.com/TrustedDataFramework/)
 [Get Started](README.md)
