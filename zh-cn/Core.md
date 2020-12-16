@@ -1,4 +1,4 @@
-## 2.1 简介
+## 简介
 - ### 什么是Trusted Data Suite？
 
 &#160;&#160;&#160;&#160;&#160;&#160;可信数据套件(TDS)的定位是:提供商业级的区块链基础设施服务，同时在 基础底层系统上，构建具有高可扩展的应用业务，为各行各业提供最专业的区块链底层系统技术。 
@@ -12,7 +12,7 @@
 - ### TDS产品矩阵介绍
 ![python-success](../img/matrix.png)
 
-## 2.2 产品架构
+## 产品架构
 
 ![python-success](../img/framework.png)
 
@@ -79,7 +79,6 @@ java -jar sunflower*.jar --spring.config.location=$HOME/Documents/local0.yml
 java -jar sunflower*.jar --spring.datasource.url="jdbc:h2:mem:test"
 ```
 
-### 证书
 ### 编码格式
 &#160;&#160;&#160;&#160;&#160;&#160;递归前缀编码(RLP)：https://github.com/ethereum/wiki/wiki/RLP 一种二进制序列化规范，优点是紧凑，缺点是最大只支持对4G以下的内容进行编解码。
 
@@ -155,8 +154,8 @@ java -jar sunflower*.jar --spring.datasource.url="jdbc:h2:mem:test"
 ### payload 的不同含义
 
 1. coinbase 事务和 转账事务的 payload 一般为空，特别的是 PoA 共识的 payload 填写的是出块者的公钥
-2. 对于合约部署事务，payload 是智能合约 wasm 字节码
-3. 对于合约调用事务，payload 是调用智能合约的二进制参数，构造方法是把智能合约方法名长度放在第一个字节，后面跟方法名的 acii 编码，剩余的就是针对具体调用的方法的参数
+2. 对于合约部署事务，payload 包含了智能合约 wasm 字节码、合约的 ABI 和构造器参数等。
+3. 对于合约调用事务，payload 是调用智能合约的二进制参数，需要通过 sdk 构造
 
 ## 账户模型
 
@@ -216,7 +215,7 @@ address = h[len(b) - 20:]
 
 ## 共识机制
 
-## 简介
+### 简介
 &#160;&#160;&#160;&#160;&#160;&#160;共识引擎是区块链的引擎，维系着区块链世界的正常运转。共识算法就是为了达到共同认识所涉及的算法，它主要解决多点统一意见的问题。 常见的共识算法 有PoW(工作量证明)，PoS(股权证明)，VRF(可验证随机函数)等。
 
 &#160;&#160;&#160;&#160;&#160;&#160;区块链的共识机制，其实就是自治生态系统内部生产关系的演变，其演变方式和人类历史进程有诸多相似。
@@ -235,11 +234,11 @@ address = h[len(b) - 20:]
 
 &#160;&#160;&#160;&#160;&#160;&#160;PoW和PoS是目前公有链最常用的共识机制，但是PoW和PoS在系统的处理能力上不足。主要体现在两个方面：一是区块速度不够快，例如比特币平均10分钟出一个区块，以太坊平均15s出一个区块；二是，每个区块的交易容量有限，例如比特币的区块大小在1M左右，大概能够包括2000笔交易。
 
-## 共识类型
+### 共识类型
 &#160;&#160;&#160;&#160;&#160;&#160;TDS支持POA、POS和POW。（后续会持续更新）
 
-### POA
-#### POA 参数    
+#### POA
+##### POA 参数    
 
 ```yml
 sunflower:
@@ -248,12 +247,12 @@ sunflower:
     genesis: 'genesis/poa.jsonc' # 创世区块的 url，搜索优先级是 网路 > 文件系统 > classpath 
     block-interval: '1' # 出块间隔，最小值是一秒
     enable-mining: 'true' # 是否开启挖矿
-    private-key: 'f00df601a78147ffe0b84de1dffbebed2a6ea965becd5d0bd7faf54f1f29c6b5' # 节点的私钥明文，建议使用证书的方式加载
+    private-key: 'f00df601a78147ffe0b84de1dffbebed2a6ea965becd5d0bd7faf54f1f29c6b5' # 节点的私钥明文，建议使用环境变量的方式加载
     allow-empty-block: 'false' # 是否允许空块
     max-body-size: '2048' # 区块的最大事务数量限制
 ```
 
-#### PoA的创世区块文件
+##### PoA的创世区块文件
 
 ```jsonc
 {
@@ -278,7 +277,7 @@ sunflower:
   }
 }
 ```
-#### POA的加入和退出
+##### POA的加入和退出
 
 &#160;&#160;&#160;&#160;&#160;&#160;权威证明共识（又称PoA共识）规定，节点只有被授权以后才能参与区块链共识，也只有被授权的节点能加入 p2p 网络
 
@@ -322,9 +321,9 @@ sunflower:
 ```
 &#160;&#160;&#160;&#160;&#160;&#160;3、节点A通过了节点B的请求后，因为原先只有节点A处在授权节点中，所以满足了超过2/3同意的条件，节点B加入了 p2p 许可节点。若节点C再要加入 p2p 网络，则必须节点A和节点B都同意才可以，因为此时若只有节点A同意，没有满足 2/3 以上的同意。
 
-### POS
+#### POS
 
-#### POS参数 (PoS)
+##### POS参数 (PoS)
 
 ```yml
 sunflower:
@@ -340,7 +339,7 @@ sunflower:
 ```
 
 
-#### PoS的创世区块文件
+##### PoS的创世区块文件
 
 ```jsonc
 {
@@ -361,7 +360,7 @@ sunflower:
   }
 }
 ```
-#### POS的加入和退出
+##### POS的加入和退出
 &#160;&#160;&#160;&#160;&#160;&#160;PoS 即 Proof of Stake。在 PoS 共识中，股权较大的节点拥有区块打包权。这里的PoS使用内置合约保存每个账号收到的投票数量，地址是0000000000000000000000000000000000000005。
 
 &#160;&#160;&#160;&#160;&#160;&#160;在这个内置合约中每个账号被按照投票数量排序，假设sunflower.consensus.max-miners=10，则投票排名前10的账户会获得区块打包权。
@@ -406,8 +405,8 @@ sunflower:
 }
 ```
 3、节点A只有撤回给B的投票后才能重新投票
-### POW
-#### POW 参数
+#### POW
+##### POW 参数
 ```yml
 sunflower:
   consensus:
@@ -420,7 +419,7 @@ sunflower:
     max-body-size: '2048' # 区块的最大事务数量限制
     miner-coin-base: '9cbf30db111483e4b84e77ca0e39378fd7605e1b' # 矿工收益地址
 ```
-#### PoW的创世区块文件
+##### PoW的创世区块文件
 
 ```json
 {
@@ -438,7 +437,7 @@ sunflower:
   }
 }
 ```
-#### POW机制
+##### POW机制
 &#160;&#160;&#160;&#160;&#160;&#160;PoW 即工作量证明，优先解决哈希值难题的矿工可获得区块打包权，工作量证明用伪代码表示如下：
 ```
 while True:
@@ -660,9 +659,8 @@ node://03a5acb1faa4dfe70f8e038e297de499cb258cc00afda2822e27291ed180013bd8@192.16
 | traversed | bool | 对方是否已将所有账户传输完成 |
 
 ## 密码算法
-
-
 &#160;&#160;&#160;&#160;&#160;&#160;密码算法采用国密算法,由国家密码管理局于2010年12月17日发布，主要实现为sm2、sm3和sm4
+
 ### 简介
 #### SM2 
 
@@ -748,23 +746,41 @@ keystore 用于保存用户的私钥
 }
  ```
 keystore 的生成过程用伪代码表示:
-```
+
+```py
 keystore = {}
-sk = b'********' # 私钥password = '********' # 用户输入的密码salt =
-randbytes(32) # 生成随机盐iv = randbytes(16) # 生成随机向量key = sm3(salt
-+ password.encode('ascii'))[:16] # 推导出keykeystore['salt'] =
-salt.hex()keystore['iv'] = iv.hex()keystore['ciphertext'] =
-sm4.encrypt_ctr_nopadding(key, iv, sk) # 对私钥进行加密保存keystore['mac']
-= sm3(key + ciphertext).hex() # 生成 mackeystore['id'] == uuid()
+sk = b'********' # 私钥
+password = '********' # 用户输入的密码
+salt = randbytes(32) # 生成随机盐
+iv = randbytes(16) # 生成随机向量
+
+key = sm3(salt + password.encode('ascii'))[:16] # 推导出密钥
+keykeystore['salt'] = salt.hex()
+keystore['iv'] = iv.hex()
+
+keystore['ciphertext'] = sm4.encrypt_ctr_nopadding(key, iv, sk) # 对私钥进行加密保存
+
+keystore['mac'] = sm3(key + ciphertext).hex() # 生成 mac 用于验证密码的正确性
+
+keystore['id'] == uuid()
 keystore['version'] = '1'
 ```
+
 keystore 的读取过程用伪代码表示：
-```
-password = '********' # 用户输入的密码salt =
-bytes.fromhex(keystore['salt']) # 盐iv = bytes.fromhex(keystore['iv']) #
-ivkey = sm3(salt + password.encode('ascii'))[:16]cipher =
-bytes.fromhex(keystore['ciphertext'])sk = sm4.decrypt_ctr_nopadding(key,
-iv, cipher) # 读取到私钥
+
+```py
+password = '********' # 用户输入的密码
+salt = bytes.fromhex(keystore['salt']) # 盐
+iv = bytes.fromhex(keystore['iv']) # iv
+key = sm3(salt + password.encode('ascii'))[:16]
+
+# 对输入密码进行校验
+mac = sm3(key + ciphertext).hex()
+if mac != keystore['mac']:
+  raise BaseException('解析 keystore 失败: 密码错误')
+
+cipher = bytes.fromhex(keystore['ciphertext'])
+sk = sm4.decrypt_ctr_nopadding(key, iv, cipher) # 读取到私钥
 ```
 <b>注：具体国密和keystore调用可以参考SDK使用</b>
 
@@ -786,6 +802,7 @@ iv, cipher) # 读取到私钥
 &#160;&#160;&#160;&#160;&#160;&#160;内存指令（Memory Instructions），共25条。
 
 &#160;&#160;&#160;&#160;&#160;&#160;数值指令（Numeric Instructions），共127条。
+
 ### 执行结构
 &#160;&#160;&#160;&#160;&#160;&#160;WebAssembly文件(称之为模块)总体上由三块组成：魔数(固定值:0x6d736100，小端存储)、版本号(当前值:0x00000001，小端存储)、以及若干个区(section)。
 
