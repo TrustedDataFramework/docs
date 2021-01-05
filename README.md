@@ -71,7 +71,7 @@
 （2）具体安装步骤：
 
  &nbsp;&nbsp;第一步：打开虚拟机
-
+ 
 ![图片1](https://github.com/TrustedDataFramework/docs/blob/master/img/install/picture1.png)
 
  &nbsp;&nbsp;第二步：选择Boot system installer，运行TDOS虚拟机镜像系统
