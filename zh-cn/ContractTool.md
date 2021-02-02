@@ -6,7 +6,7 @@
 
 1、TDOS安装完成以后，如下图所示：
 
-<img src="../img/contract/picture48.png" alt="picture48" style="zoom:75%;" />
+<img src="../img/zh-cn/contract/picture48.png" alt="picture48" style="zoom:75%;" />
 
 2、点击查看智能合约开发环境，跳转contract-template目录下，右击鼠标，打开终端，安装git，在命令行输入：sudo apt install git ，回车；
 
@@ -14,7 +14,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;遇到Do you want to continue? 输入y,回车。
 
-![picture59](../img/contract/picture59.png)
+![picture59](../img/zh-cn/contract/picture59.png)
 
 3、下载nvm，在命令行输入：`Git clone https://github.com/creationix/nvm.git` ，回车，下载时间略长，请耐心等待；
 
@@ -22,7 +22,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;启用nvm，在命令行输入source ~/.bashrc。
 
-![picture57](../img/contract/picture57.png)
+![picture57](../img/zh-cn/contract/picture57.png)
 
 4、安装node.js，在命令行输入sudo apt-get install -y nodejs；
 
@@ -32,7 +32,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;依赖安装好之后，就可以部署或者调用编写好的智能合约。
 
-![picture58](../img/contract/picture58.png)
+![picture58](../img/zh-cn/contract/picture58.png)
 
 
 
@@ -167,12 +167,12 @@ console.log(deployCoin().catch(e => console.log(e)).then(x => console.log(x)))
 
 7、部署合约成功后返回两个地址，owner为所有者地址，另一个地址为合约地址，响应结果如下：
 
-![picture60](../img/contract/picture60.png)
+![picture60](../img/zh-cn/contract/picture60.png)
 
 8、调用合约的时候需要把部署合约返回的合约地址填到常量 c 的位置，注释掉部署事务，打开转账事务。
 
-![picture61](../img/contract/picture61.png)
+![picture61](../img/zh-cn/contract/picture61.png)
 
 9、调用合约及响应结果如下：
 
-![picture62](../img/contract/picture62.png)
+![picture62](../img/zh-cn/contract/picture62.png)

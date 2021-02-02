@@ -1,4 +1,4 @@
-# TDS 智能合约编写指引 (AssemblyScript 篇)
+# TDS 智能合约编写指引
 
 [TOC]
 

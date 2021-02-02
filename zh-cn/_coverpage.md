@@ -6,4 +6,4 @@
 
 
 [Github](https://github.com/TrustedDataFramework)
-[Get Started](README.md)
+[Get Started](zh-cn/Overview.md)

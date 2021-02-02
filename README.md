@@ -1,308 +1,295 @@
-# TDOS 概况
+## Introduction
 
-## 简介
-&#160;&#160;&#160;&#160;&#160;&#160;TDOS（Trusted Data Operation System）又称可信数据操作系统，是由上海财经大学金融科技研究院和常州市勇阳信息技术有限公司联合研发的全球首款操作系统级区块链服务，包含一整套区块链底层系统、智能合约应用程序的开发与运维技术框架及其衍生服务。 
-    
-&#160;&#160;&#160;&#160;&#160;&#160;TDOS以快捷部署为核心特点，旨在让一般技术人员和用户能够快速上手开发、自由配置、轻松使用区块链业务系统，打通区块链与一般技术人员、大众间的技术壁垒、认知壁垒，实现区块链应用的加速落地。 
+TDOS (Trusted Data Operation System) is the world’s first operating system-level blockchain service jointly developed by the Financial Technology Research Institute of Shanghai University of Finance and Economics and Changzhou Yongyang Information Technology Co., Ltd., including a complete set of The technical framework for the development and operation and maintenance of the underlying system of the blockchain, smart contract applications and its derivative services.
 
-## 未来规划
+ TDOS takes fast deployment as its core feature, and aims to enable general technical personnel and users to quickly develop, freely configure, and easily use the blockchain business system, and break through the technical and cognitive barriers between the blockchain and general technical personnel and the public. , To realize the accelerated landing of blockchain applications.
 
-&#160;&#160;&#160;&#160;&#160;&#160;TDOS产品的版本迭代计划如下：
 
-&#160;&#160;&#160;&#160;&#160;&#160;1）版本号：v2.0
+## Product roadmap
 
-&#160;&#160;&#160;&#160;&#160;&#160;时间：2020年12月
+The version iteration plan of TDOS products is as follows:
 
-&#160;&#160;&#160;&#160;&#160;&#160;TDOS初步集成版：TDOS基础技术栈及生态工具，一键部署安装区块链底层系统。
+1）v2.0
 
-&#160;&#160;&#160;&#160;&#160;&#160;2）版本号：v3.0
+ release time：2020/12
 
-&#160;&#160;&#160;&#160;&#160;&#160;预计时间：2021年6月
+TDOS preliminary integrated version: TDOS basic technology stack and ecological tools, one-click deployment and installation of the underlying blockchain system.
 
-&#160;&#160;&#160;&#160;&#160;&#160;TDOS隐私计算版本：TDOS增强对隐私保护的功能，比如同态隐藏、多方计算、数据重铸等。
+2）v3.0
 
-&#160;&#160;&#160;&#160;&#160;&#160;3）版本号：v4.0
+ETA：2021/6
 
-&#160;&#160;&#160;&#160;&#160;&#160;预计时间：2021年12月
+TDOS privacy computing version: TDOS enhances privacy protection functions, such as homomorphic hiding, multi-party computing, data recasting, etc.
 
-&#160;&#160;&#160;&#160;&#160;&#160;TDOS网中网版本：支持基于TDOS部署的不同的网络跨链及网络合并。
+3）v4.0
 
-&#160;&#160;&#160;&#160;&#160;&#160;4）版本号：v5.0
+ETA：2021/12
 
-&#160;&#160;&#160;&#160;&#160;&#160;预计时间：2022年6月
+TDOS network version: support different network cross-chain and network merger based on TDOS deployment.
 
-&#160;&#160;&#160;&#160;&#160;&#160;TDOS全生态工具版本：彻底与操作系统完全集成，软硬件集合，实现可信计算环境。
+4）v5.0
 
-&#160;&#160;&#160;&#160;&#160;&#160;5）版本号：v6.0
+ETA：2022/6
 
-&#160;&#160;&#160;&#160;&#160;&#160;预计时间：2022年12月
+TDOS full ecological tool version: completely integrated with the operating system, software and hardware integration, to achieve a trusted computing environment.
 
-&#160;&#160;&#160;&#160;&#160;&#160;TDOS行业集成版：根据不同的业务环境，比如金融、溯源、游戏等，提供定制版本。
+5）v6.0
 
-## TDOS安装说明
+ETA：2022/12
 
-### 部署环境要求
+TDOS industry integration version: According to different business environments, such as finance, traceability, games, etc., provide customized versions.
 
-（1）硬件标准
+## Installation Guide
 
- &nbsp;&nbsp; CPU i5以上；
+### Deployment environment requirements 
 
- &nbsp;&nbsp; 内存：16G运行内存以上；
+（1）Hardware requirements
 
- &nbsp;&nbsp; 硬盘容量：100G以上；
+ &nbsp;&nbsp; CPU i5 or +
 
- (2) 软件标准
+ &nbsp;&nbsp; RAM：8G or +
 
-  &nbsp;&nbsp; 初始系统环境Mac OS 10.15 以上 / Windows 10以上；
+ &nbsp;&nbsp; HD capacity：100G or +
 
-  &nbsp;&nbsp; 本系统以在虚拟机环境下安装为例，也可以在实体机中安装；
+ (2) Software requirements
 
-  &nbsp;&nbsp; 虚拟机VMWare具体配置要求见附件1；
+  &nbsp;&nbsp; Initial Operation System: Mac OS 10.15 or +/ Window 10 or +
 
-  &nbsp;&nbsp;（如果没有安装虚拟机可前往官网下载：
- https://www.vmware.com）
+  &nbsp;&nbsp; This system takes installation in a virtual machine environment as an example, and it can also be installed in a physical machine; 
 
-  &nbsp;&nbsp;本系统已安装Vmware-tools，如果有需要，可以尝试手动安装，虚拟机VMWare工具安装见附件2；
+  &nbsp;&nbsp; For the specific configuration requirements of VMWare, see Annex 1; 
 
-### TDOS操作系统安装
+  &nbsp;&nbsp; If you don’t have a virtual machine installed, you can go to the official website to download: https://www.vmware.com) 
 
-（1）在虚拟机中安装TDOS.iso镜像；
+###  The installation of TDOS
 
-（2）具体安装步骤：
+(1) Install [TDOS.iso](https://tdos-store.oss-cn-beijing.aliyuncs.com/TDOS.iso) image in the virtual machine; 
 
- &nbsp;&nbsp;第一步：打开虚拟机
- 
-![图片1](./img/install/picture1.png)
+(2) Steps of installation:
 
- &nbsp;&nbsp;第二步：选择Boot system installer，运行TDOS虚拟机镜像系统
+ &nbsp;&nbsp; step 1: open the virtual machine 
 
-![图片2](./img/install/picture2.png)
+![picture1](img/install/picture1.png)
 
- &nbsp;&nbsp;第三步：进入默认用户账号（yongyang），输入密码123456（默认），解锁系统后点击sign in 重新设置账号；
+ &nbsp;&nbsp;Step 2: Select Boot system installer to run TDOS virtual machine mirroring system 
 
-![图片3](./img/install/picture3.png)
+![picture2](img/install/picture2.png)
 
- &nbsp;&nbsp;第四步：依次填充你的名字、新的用户登录名、用户密码（牢记，后续操作会使用）、Root账户密码(可忽略)以及主机名称（数字英文随意，无字数要求）。完成后，点击进入下一步。
+ &nbsp;&nbsp;Step 3: Enter the default user account (yongyang), enter the password 123456 (default), unlock the system and click Sign In to reset the account; 
 
-![图片4](./img/install/picture4.png)
+![picture3](img/install/picture3.png)
 
- &nbsp;&nbsp;第五步：删除原有分区
- 
- ![图片5](./img/install/picture5.png)
+ &nbsp;&nbsp;Step 4: Fill in your name, new user login name, user password (make sure you remember it, it will be used in subsequent operations), Root account password (can be ignored), and host name (numbers in English are optional, no word requirements). When finished, click to go to the next step. 
+![picture4](img/install/picture4.png)
 
- &nbsp;&nbsp;第六步：选择第二个分区，点击箭头（确认）
+ &nbsp;&nbsp;Step 5: Delete the original partition! 
+[Picture5](img/install/picture5.png) 
 
-![图片6](./img/install/picture6.png)
+ &nbsp;&nbsp;Step 6: Select the second partition and click the arrow (confirm) 
 
- &nbsp;&nbsp;第七步：勾选方框内容，然后红箭头处选 / 。完成后，点击Next；
+![Picure6](img/install/picture6.png)
 
-![图片7](./img/install/picture7.png)
+ &nbsp;&nbsp;Step 7: Check the box content, and then select / at the red arrow. When finished, click Next; 
+![Picure7](img/install/picture7.png)
 
- &nbsp;&nbsp;第八步：点击start，等待完成
+ &nbsp;&nbsp;Step 8: Click start and wait for completion
+![Pic 8](img/install/picture8.png)
 
-![图片8](./img/install/picture8.png)
+![Picture9](img/install/picture9.png)
 
-![图片9](./img/install/picture9.png)
+ &nbsp;&nbsp;Step 9: Click reboot; 
 
- &nbsp;&nbsp;第九步：点击reboot；
+![Picture10](img/install/picture10.png)
 
-![图片10](./img/install/picture10.png)
+ &nbsp;&nbsp;Step 10: If you haven't entered this interface for a long time, click Enter; 
+![Picture11](img/install/picture11.png)
 
- &nbsp;&nbsp;第十步：如果长时间未进入此界面，点击回车；
+ &nbsp;&nbsp;Step 11: Enter the new account password and log in again 
+![Picture12](img/install/picture12.png)
 
-![图片11](./img/install/picture11.png)
+ &nbsp;&nbsp;Step 12: After the TDOS mirroring system is installed, this interface will be displayed. 
+![Picture13](img/install/picture13.png)
 
- &nbsp;&nbsp;第十一步：输入新的账号密码并重新登录
+###  TDOS Deployment Guide
 
-![图片12](./img/install/picture12.png)
+(1) Preparation: Before installing the wizard tool, if necessary, install Vmware-tools (see attachment 2 for details) 
 
- &nbsp;&nbsp;第十二步：TDOS镜像系统安装完成后，显示此界面。
+(2) Wizard tool installation 
 
-![图片13](./img/install/picture13.png)
+&nbsp;&nbsp;Step 1: Click the red arrow to open the application interface; 
 
-### TDOS链部署向导
+![Picture14](img/install/picture14.png)
 
-（1）准备工作：安装向导工具前，如有需要，可先安装Vmware-tools（详见附件2）
+&nbsp;&nbsp;Step 2: Click the application icon in the red box to start the installation; 
+![Picture15](img/install/picture15.png)
 
-（2）向导工具安装
+&nbsp;&nbsp;Step 3: After opening, as shown in the figure, click inside the red box to enter the installation; 
+![Picture16](img/install/picture16.png)
 
-&nbsp;&nbsp;第一步：点红色箭头指示处打开应用界面；
+&nbsp;&nbsp;Step 4: This is the TDOS software installation license agreement. After reading and agreeing, click in the red box to proceed to the next step; 
+![Picture17](img/install/picture17.png)
 
-![图片14](./img/install/picture14.png)
+&nbsp;&nbsp;Step 5: After agreeing, display the installed components and click the "Continue" button; 
+![Picture18](img/install/picture18.png)
 
-&nbsp;&nbsp;第二步：点击红框内应用图标，开始安装；
+&nbsp;&nbsp;Step 6: Enter the administrator password (login password) set in the virtual machine image, and click "Continue" to enter the next step; 
+![Picture19](img/install/picture19.png)
 
-![图片15](./img/install/picture15.png)
+&nbsp;&nbsp;Step 7: Copy the TDOS serial number and paste it. If there is no TDOS serial number, please contact the TDOS team to apply for the serial number. Click the "Continue" button; 
+![Picture20](img/install/picture20.png)
 
-&nbsp;&nbsp;第三步：打开后如图所示，点击红框内进入安装；
+&nbsp;&nbsp;Step 8: Click to download the two files of node program and operation and maintenance tool respectively; 
+![Picture21](img/install/picture21.png)
 
-![图片16](./img/install/picture16.png)
+&nbsp;&nbsp;Step 9: After the installation is complete, click the "Continue" button; 
+![Picture22](img/install/picture22.png)
 
-&nbsp;&nbsp;第四步：此为TDOS软件安装许可协议，阅读同意后，点击红框内进行下一步；
+&nbsp;&nbsp;Step 10: By default, "Connect to an existing network" is selected, or you can choose to create a new network. The new network has two modes: template mode and expert mode. Choose any network, click "Continue" to proceed to the next step; 
 
-![图片17](./img/install/picture17.png)
+&nbsp;&nbsp;<b>1. The prerequisite for choosing to connect to an existing network is that the existing network is successfully deployed. There is no need to select consensus mechanism, cryptographic components, block generation speed, etc., just enter the network address to be connected and click to continue deployment. </b>
+![picture23](img/install/picture23.png)
 
-&nbsp;&nbsp;第五步：同意后，显示安装包含组件然后点击“继续”按钮；
+&nbsp;&nbsp;<b>2. Select the template mode and click Continue. </b>
+![picture82](img/install/picture82.png)
 
-![图片18](./img/install/picture18.png)
+&nbsp;&nbsp;Select the consensus mechanism, you can choose any of poa, pos and pow, and click to proceed to the next step. 
+![picture83](img/install/picture83.png)
 
-&nbsp;&nbsp;第六步：输入在虚拟机镜像中设置的管理员密码()，并点击“继续”进入下一步；
+&nbsp;&nbsp;Asymmetric encryption algorithm can choose SM2, ED25519, hash algorithm can choose SM3, KECCAK-256, SHA3-256, and they can be combined arbitrarily. After selecting the cryptographic components, click Continue. 
+![picture84](img/install/picture84.png)
 
-![图片19](./img/install/picture19.png)
+&nbsp;&nbsp;The block generation speed should not be less than 5 seconds. Fill in the number directly without the time unit. The default time unit is s; 
 
-&nbsp;&nbsp;第七步：复制U盘中序列号文档的序列号粘贴即可，点击“继续”按钮；
+&nbsp;&nbsp;The network ID cannot start with a number, nor can special characters appear; 
 
-![图片20](./img/install/picture20.png)
+&nbsp;&nbsp;The node type can be full node or consensus node. If the seed node does not enable node discovery, neighbor nodes can connect to the network, but the seed node block will not be synchronized; 
 
-&nbsp;&nbsp;第八步：分别点击下载节点程序、运维工具两个文件；
+&nbsp;&nbsp;Click Continue to proceed to the next deployment. 
+![picture85](img/install/picture85.png)
 
-![图片21](./img/install/picture21.png)
+&nbsp;&nbsp;<b>3. Select expert mode and click Continue. </b> 
+![picture86](img/install/picture86.png)
 
-&nbsp;&nbsp;第九步：安装完成后，点击“继续”按钮；
+&nbsp;&nbsp;Consensus mechanism can choose poa, pos and pow three; 
 
-![图片22](./img/install/picture22.png)
+&nbsp;&nbsp;The block generation speed should not be less than 5 seconds. Fill in the number directly without the time unit. The default time unit is "s"; 
 
-&nbsp;&nbsp;第十步：默认选择“连接到已有网络”，也可以选择创建新的网络，新的网络有模板模式和专家模式两种。选择任意一种网络，点击“继续”，进行下一步；
+&nbsp;&nbsp;Handling fee = gas unit price * gas, a handling fee will be charged for sending a transaction, the gas unit price is set to 0, and no handling fee will be charged for sending a transaction; 
 
-![图片23](./img/install/picture23.png)
+&nbsp;&nbsp;The seed node is mainly used to connect the node when the TDOS network is first started. If it is a single miner node, no input is required. The format of the seed node is: network ID://IP:port number, for example: helloworld://192.168.1.3:7000; 
 
-&nbsp;&nbsp;第十一步：点击“部署”按钮，进入下一步；
+&nbsp;&nbsp;If you choose to turn on mining, the node is a consensus node, and if you choose not to turn on mining, it is a full node; 
 
-![图片24](./img/install/picture24.png)
+&nbsp;&nbsp;Asymmetric encryption algorithm can choose SM2, ED25519, hash algorithm can choose SM3, KECCAK-256, SHA3-256, they can be any combination; 
 
-&nbsp;&nbsp;第十二步：等待进度条走完全程即可；
+&nbsp;&nbsp;After selecting the cryptographic components, click Continue. 
 
-![图片25](./img/install/picture25.png)
+![picture87](img/install/picture87.png)
 
-&nbsp;&nbsp;第十三步：点击完成结束安装。
+&nbsp;&nbsp;If you select an empty block, the system will automatically generate a block regardless of whether there is a transaction sent or not. If no empty block is selected, the block will be generated only after the transaction is successfully sent; 
 
-![图片26](./img/install/picture26.png)
+&nbsp;&nbsp;If turn on "node discovery", neighbor nodes can synchronize data, if you do not turn on "node discovery", neighbor nodes cannot synchronize data; 
 
-### 安装完成状态说明
+&nbsp;&nbsp;The difficulty value parameter is only available when the pow consensus is selected, and this parameter must be greater than or equal to 1, and cannot be 0; 
 
-（1）安装完成界面如下：
+&nbsp;&nbsp;The network ID cannot start with a number, nor can it be a special character; 
 
-![图片27](./img/install/picture27.png)
+&nbsp;&nbsp;Click Continue to the next step. 
 
-（2）功能说明
+![picture88](img/install/picture88.png)
 
-&nbsp;&nbsp;账号密码：系统统一分配，用于登录TDOS运维平台；
+&nbsp;&nbsp;The pre-allocated address and amount will be written into the genesis block, and these accounts will have the corresponding amount after the node is started; 
 
-&nbsp;&nbsp;TDOS运维工具：TDOS运维工具能够帮助用户同步监测链的具体情况，在分叉恢复、卡块监测、导入导出、预警通知以及鉴权设置等方面进行运维调整。
+&nbsp;&nbsp;For PoA and PoS consensus, miner addresses need to be preset, and these addresses will become the earliest consensus participants; 
 
-&nbsp;&nbsp;DAPP首页：用户可以通过DAPP更直观的了解TDOS应用场景
+&nbsp;&nbsp;The pre-allocated addresses and miner addresses are generated by selecting different cryptographic algorithms in [JS-SDK](https://github.com/TrustedDataFramework/js-sdk). The system supports adding up to 20 pre-allocated addresses and miners address. 
 
-&nbsp;&nbsp;智能合约开发环境： 用户可在上面进行智能合约的开发。
+&nbsp;&nbsp;<span style="color:red;background:background color;font-size:text size;font-family:font;">It is important to note that the current node address is determined by the selected asymmetric encryption algorithm and Determined by different combinations of Greek algorithm</span> 
 
+&nbsp;&nbsp;Click to continue. 
 
-### 附件
+![picture89](img/install/picture89.png)
 
-#### 附件1:
+&nbsp;&nbsp;The configured parameters are displayed here for confirmation, click to continue. 
 
-Windows版虚拟机配置
+![picture90](img/install/picture90.png)
 
-在网上下载VMware虚拟机文件进行安装。
+&nbsp;&nbsp;Step 11: Click the "Deploy" button to enter the next step; 
 
-第一步：创建新的虚拟机
+![Picture24](img/install/picture24.png)
 
-![图片57](./img/install/picture57.png)
+&nbsp;&nbsp;Step 12: Wait for the progress bar to complete the process; 
 
-第二步：默认信息进行下一步；
+![Picture25](img/install/picture25.png)
 
-![图片58](./img/install/picture58.png)
+&nbsp;&nbsp;Step 13: Click Finish to end the installation. 
 
-第三步：选择本地镜像文件TDOS.iso，下载链接：https://tdos-store.oss-cn-beijing.aliyuncs.com/TDOS.iso
+![Picture27](img/install/picture26.png)
 
-![图片59](./img/install/picture59.png)
+### Installation completion status description
 
-![图片60](./img/install/picture60.png)
+(1) The installation completion interface is as follows: 
 
-第四步：选择客户操作系统 linux和版本Ubuntu
+![Picture27](img/install/picture26.png)
 
-![图片61](./img/install/picture61.png)
+(2) Function description 
 
-第五步：虚拟机命名并选择安装位置
+&nbsp;&nbsp;Account password: uniformly assigned by the system, used to log in to the TDOS operation and maintenance platform; 
 
-![图片62](./img/install/picture62.png)
+&nbsp;&nbsp;TDOS operation and maintenance tools: TDOS operation and maintenance tools can help users synchronize the specific conditions of the monitoring chain, and make operation and maintenance adjustments in terms of fork recovery, jam monitoring, import and export, early warning notifications, and authentication settings. 
 
-第六步：指定磁盘容量大小，设置>=50g
+&nbsp;&nbsp;DAPP Homepage: Users can understand TDOS application scenarios more intuitively through DAPP 
 
-![图片63](./img/install/picture63.png)
+&nbsp;&nbsp;Smart contract development environment: Users can develop smart contracts on it. 
 
-第七步：自定义虚拟机硬件，建议内存配置不低于8G，处理器数量不少于4个，网络适配器选择桥接模式，勾选复制物理网络连接状态。
+### annex
 
-![图片64](./img/install/picture64.png)
+#### annex 1:
 
-![图片65](./img/install/picture65.png)
+ virtual machine configuration in Windows
 
-![图片66](./img/install/picture66.png)
+Download the VMware virtual machine file from the Internet for installation.
 
-![图片67](./img/install/picture67.png)
+Step 1: Create a new virtual machine
 
-第八步：安装完成
+![图片57](img/install/picture57.png)
 
-![图片68](./img/install/picture68.png)
+Step 2: Default information and proceed to the next step;
 
-#### 附件2:
+![图片58](img/install/picture58.png)
 
-安装Vmware-tools
+Step 3: Select the local mirror file TDOS.iso, download link: https://tdos-store.oss-cn-beijing.aliyuncs.com/TDOS.iso
 
-（1）Vmware-tools主要实现虚拟机和windows之间文件的复制与粘贴功能，便于操作；
 
-（2）安装步骤：
+![图片59](img/install/picture59.png)
 
-第一步：选择虚拟机，点击“Vmware-tools”进行安装；
+![图片60](img/install/picture60.png)
 
-![图片69](./img/install/picture69.png)
+Step 4: Choose the guest operating system linux and version Ubuntu
 
-第二步：红框内的信息提示Vmware-tools已经安装完成；
+![图片61](img/install/picture61.png)
 
-![图片70](./img/install/picture70.png)
+Step 5: Name the virtual machine and select the installation location
 
-第三步：点击Vmware-tools图标打开工具后选择红框内文件进行复制；
+![图片62](img/install/picture62.png)
 
-![图片71](./img/install/picture71.png)
 
-第四步：将文件粘贴到桌面；
+Step 6: Specify the disk capacity, set >=50g
 
-![图片72](./img/install/picture72.png)
+![图片63](img/install/picture63.png)
 
-第五步：右击空白桌面，选择 Open Termial进入终端；
+Step 7: Customize the virtual machine hardware. It is recommended that the memory configuration is not less than 8G, the number of processors is not less than 4, the network adapter selects the bridge mode, and the copy physical network connection status is checked.
 
-![图片73](./img/install/picture73.png)
+![图片64](img/install/picture64.png)
 
-第六步：在命令行界面，输入 cd Desktop进入桌面路径；
+![图片65](img/install/picture65.png)
 
-![图片74](./img/install/picture74.png)
+![图片66](img/install/picture66.png)
 
-第七步：在桌面路径输入 tar zxvf 压缩包的名称，解压压缩包；
+![图片67](img/install/picture67.png)
 
-![图片75](./img/install/picture75.png)
+Step 8: Configuration is complete
 
-第八步：输入ls，查看是否有此文件，有代表解压成功；
+## How to use this document
 
-![图片76](./img/install/picture76.png)
-
-第九步：输入 cd vmware-tools-disrib 命令行，进入解压包；
-
-![图片77](./img/install/picture77.png)
-
-第十步：输入 sudo ./vmware-install.pl ，执行安装命令；
-
-![图片78](./img/install/picture78.png)
-
-第十一步：在箭头指向处输入之前设置的虚拟机密码，然后按回车键。（密码不会显示出来）
-
-![图片79](./img/install/picture79.png)
-
-第十二步：回车后，输入命令yes，表示同意安装vmware-tools；
-
-![图片80](./img/install/picture80.png)
-
-第十三步：输入完YES之后，一直按回车直至下图红框内命令行出现，表示安装完成（同时这个屏幕会扩大至填充完黑色部分）
-
-![图片81](./img/install/picture81.png)
-
-## 如何使用本文档
-
-&#160;&#160;&#160;&#160;&#160;&#160;通过本文档可以获取TDOS的架构详情，以及用户使用TDOS的基本方法。首先，要想成为网络中的节点，需要安装并运行一个TDOS客户端。用户可根据安装步骤自行安装需要的组件。在使用上，TDOS提供从部署可信数据链到智能合约开发的全套工具，提供浏览器以供实时展示关键指标，提供运维工具以维护节点，提供应用广场来展现TDOS的多领域应用场景。用户可根据对应工具的详细说明和使用文档中的步骤详解来进行具体操作。
+Through this document, you can get the details of the TDOS architecture and the basic methods for users to use TDOS. First of all, if you want to be a node in the network, you need to install and run a TDOS client. Users can install the required components according to the installation steps. In use, TDOS provides a complete set of tools from the deployment of trusted data links to smart contract development, provides a browser for real-time display of key indicators, provides operation and maintenance tools to maintain nodes, and provides an application square to display TDOS's multi-domain application scenarios. Users can perform specific operations according to the detailed instructions of the corresponding tools and the detailed steps in the use documents.

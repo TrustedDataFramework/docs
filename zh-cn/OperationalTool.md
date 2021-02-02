@@ -34,11 +34,11 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)登陆界面，输入用户名密码进行登陆TDOS运维平台
 
-<img src="../img/operational/picture41.png" alt="picture41" style="zoom:77%;" />
+<img src="../img/zh-cn/operational/picture41.png" alt="picture41" style="zoom:55%;" />
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)信息概要有监控信息和预警状态两大块，监控信息包含每天出块数量、区块高度、平均出块时间、平均gas单价、事务池大小、当前难度；预警状态包含cpu状态、内存、卡块情况、分叉情况、运行状态、矿工检测
 
-<img src="../img/operational/picture42.png" alt="picture42" style="zoom:55%;" />
+<img src="../img/zh-cn/operational/picture42.png" alt="picture42" style="zoom:55%;" />
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每天出块数量： 本地节点每天出块的数量
 
@@ -66,26 +66,26 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)控制台，管理、绑定节点
 
-<img src="../img/operational/picture43.png" alt="picture43" style="zoom:55%;" />
+<img src="../img/zh-cn/operational/picture43.png" alt="picture43" style="zoom:55%;" />
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;控制台可以绑定、解绑和删除节点；
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4)预警信息，管理收、发邮件信息
 
-<img src="../img/operational/picture44.png" alt="picture44" style="zoom:55%;" />
+<img src="../img/zh-cn/operational/picture44.png" alt="picture44" style="zoom:55%;" />
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(5) 鉴权设置，管理用户设置权限
 
-<img src="../img/operational/picture45.png" alt="picture45" style="zoom:55%;" />
+<img src="../img/zh-cn/operational/picture45.png" alt="picture45" style="zoom:55%;" />
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(6) 节点详情
 
-<img src="../img/operational/picture46.png" alt="picture46" style="zoom:55%;" />
+<img src="../img/zh-cn/operational/picture46.png" alt="picture46" style="zoom:55%;" />
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点击访问，访问绑定节点
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(7)数据初始化
 
-<img src="../img/operational/picture47.png" alt="picture47" style="zoom:55%;" />
+<img src="../img/zh-cn/operational/picture47.png" alt="picture47" style="zoom:55%;" />
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点击初始化按钮，节点信息和浏览器信息将被清空。成功后运维平台将退出，需要重新部署向导工具。
