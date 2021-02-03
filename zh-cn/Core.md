@@ -646,7 +646,7 @@ node://03a5acb1faa4dfe70f8e038e297de499cb258cc00afda2822e27291ed180013bd8@192.16
 | ---- | ---- | ---- |
 | code | int | ACCOUNTS = 12 |
 | total   |  long | 账户总数，只有当 traversed 为 true 时，此字段才有意义 |
-| accounts | 数组 | 账户 |
+| accounts | array | 账户 |
 | traversed | bool | 对方是否已将所有账户传输完成 |
 
 ## 密码算法
